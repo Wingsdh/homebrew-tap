@@ -5,7 +5,7 @@
 class CcSesh < Formula
   desc "sesh fork with built-in Claude Code live status in the picker"
   homepage "https://github.com/Wingsdh/cc-sesh"
-  version "2.0.0"
+  version "2.1.0"
   license "MIT"
 
   depends_on "tmux"
@@ -13,8 +13,8 @@ class CcSesh < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.0.0/cc-sesh_Darwin_x86_64.tar.gz"
-      sha256 "5693cf49f04b8d4c2ff3e84633e4e215c2c6d77803550d9a5d9a8d5f8900d65d"
+      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.1.0/cc-sesh_Darwin_x86_64.tar.gz"
+      sha256 "10c0b5fbfec1602cfafe41dd7ed52c08318a77e31b795460660658847e496051"
 
       define_method(:install) do
         bin.install "cc-sesh"
@@ -22,8 +22,8 @@ class CcSesh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.0.0/cc-sesh_Darwin_arm64.tar.gz"
-      sha256 "61753dc6bfe329faf60d6ea8af6519ff7e9072a6c9f04d79bf81a3a592a7e6a5"
+      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.1.0/cc-sesh_Darwin_arm64.tar.gz"
+      sha256 "2b25fcdf69a1dfb32e895f177f6f26974e04dc1b963a0a3653daddb1e06160ed"
 
       define_method(:install) do
         bin.install "cc-sesh"
@@ -34,16 +34,16 @@ class CcSesh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.0.0/cc-sesh_Linux_x86_64.tar.gz"
-      sha256 "badc2cf99924c758406650573058743c89d388706b2a4a70990069b799281186"
+      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.1.0/cc-sesh_Linux_x86_64.tar.gz"
+      sha256 "87fab034e028d5bc0506dd458cb9042e0c560c52fb9e76aef1b10a2acdfb22af"
       define_method(:install) do
         bin.install "cc-sesh"
         man1.install "share/man/man1/cc-sesh.1"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.0.0/cc-sesh_Linux_arm64.tar.gz"
-      sha256 "9b1b1bd68679cb970ba0693924e2ffb4a946e3c6e86b6d1b1f26533c0edac469"
+      url "https://github.com/Wingsdh/cc-sesh/releases/download/v2.1.0/cc-sesh_Linux_arm64.tar.gz"
+      sha256 "d196dab7f644f8a117b8038917789e3fd3c7d4d9c49c83aa06f7ee476806bc3e"
       define_method(:install) do
         bin.install "cc-sesh"
         man1.install "share/man/man1/cc-sesh.1"
